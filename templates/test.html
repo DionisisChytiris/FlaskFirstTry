@@ -1,0 +1,34 @@
+<!-- <h1>Hello from {{name|upper}}</h1> -->
+<!-- <h1>Hello from {{name|capitalize}}</h1> -->
+<h1>Hello from {{name|lower}}</h1>
+
+<p>My name is {{first_name}}</p>
+
+<!-- FILTERS !!!-->
+<!-- upper = uppercase all letters -->
+<!-- capitalize = uppercase the first letter -->
+<!-- safe = activate tags, e.g <strong>-->
+<!-- lower -->
+<!-- title = capitalize the first letter of each word-->
+<!-- trim = remove extra spaces from the end -->
+<!-- striptags = ignore html tags-->
+
+<p>{{stuff|safe}}</p>
+<p>{{staff|striptags}}</p>
+<p>{{stoff|title}}</p>
+
+<h3>Favorite Pizza:</h3>
+
+<!-- for loop in Jinja-->
+{% for topping in favorite_pizza %}
+    {% if topping == 41 %}
+        {{topping + 100}}<br/>
+    {% else %}
+        {{topping}}
+    {% endif %}
+
+    {{topping}}<br/>
+{% endfor  %}
+
+<br/><br/>
+{{favorite_pizza.0|upper}}
